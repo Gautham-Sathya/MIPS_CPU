@@ -1,0 +1,10 @@
+module MUX_MemtoReg(
+input logic MemtoReg,
+input logic [31:0] ALUResult,
+input logic [31:0] RD,
+output logic [31:0] MemtoReg_Out
+);
+
+assign MemtoReg_Out = MemtoReg ? RD : ALUResult; 
+
+endmodule 
